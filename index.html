@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Avenues of Grace</title>
+<link rel="icon" type="image/png" href="/AvenuesOfGrace/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* ================= GLOBAL VARIABLES ================= */
+:root {
+    --base-font-size: 18px; /* default font size for desktops */
+}
+
+/* ================= GLOBAL STYLING ================= */
+body {
+    background-color: #00a86b;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: var(--base-font-size); /* use base font size */
+    line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+header {
+    width: 100%;
+    padding: calc(var(--vh) * 0.01) calc(var(--vw) * 0.02);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffebcd;
+    box-sizing: border-box;
+}
+
+.contact-info {
+    font-size: 1em; /* relative to body font size */
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 calc(var(--vw) * 0.01);
+}
+
+.contact-info a:hover {
+    color: #0077cc;
+}
+
+/* ================= PARAGRAPH WITH IMAGE ================= */
+.text-wrap {
+    max-width: calc(var(--vw) * 0.9);
+    margin: calc(var(--vh) * 0.05) auto;
+}
+
+/* Float image right */
+img.float-right {
+    float: right;
+    width: calc(var(--vw) * 0.25); /* image is 25% of viewport width */
+    max-width: 200px;
+    height: auto;
+    margin: 0 calc(var(--vw) * 0.02) calc(var(--vh) * 0.02) 0;
+}
+
+/* ================= CENTERED PARAGRAPH ================= */
+.center-text {
+    text-align: center;
+    max-width: calc(var(--vw) * 0.9);
+    margin: calc(var(--vh) * 0.05) auto;
+    font-size: 1em; /* relative to body font size */
+}
+
+/* ================= RESPONSIVE ================= */
+@media screen and (max-width: 768px) {
+    :root {
+        --base-font-size: 16px; /* tablets / mid-size phones */
+    }
+}
+
+@media screen and (max-width: 430px) {
+    :root {
+        --base-font-size: 14px; /* small phones */
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-info {
+        margin-top: calc(var(--vh) * 0.01);
+    }
+
+    img.float-right {
+        float: none;
+        display: block;
+        margin: calc(var(--vh) * 0.02) auto;
+        width: calc(var(--vw) * 0.4); /* bigger relative to small screen */
+    }
+
+    .text-wrap, .center-text {
+        margin: calc(var(--vh) * 0.03) 10px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <img src="/AvenuesOfGrace/f.png" alt="Avenues of Grace Logo" height="120" width="120">
+    <div class="contact-info">
+        <a href="mailto:avenuesofgrace@gmail.com">avenuesofgrace@gmail.com</a> | 
+        <a href="tel:+14237147223">(423)-714-7223</a>
+    </div>
+</header>
+
+<div class="text-wrap">
+    <img src="/AvenuesOfGrace/owner.png" alt="Picture of myself" class="float-right">
+    I am a Licensed Marriage and Family Therapist with 16 years of experience providing Biblically based mental health 
+    therapy in the state of Kentucky. I work with children, adults, couples, and families facing anxiety, depression, 
+    substance use, and other life challenges. My goal is to help clients develop healthy coping skills, strengthen emotional 
+    well-being, and experience lasting personal growth. I primarily use Cognitive Behavioral Therapy, thoughtfully integrated with faith-based principles.
+</div>
+
+<p class="center-text">
+“Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will 
+uphold thee with the right hand of my righteousness.”<br><br>
+Isaiah 41:10
+</p>
+
+<script>
+// Set CSS variables based on exact viewport width and height
+function setViewportVariables() {
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+
+    document.documentElement.style.setProperty('--vw', vw + 'px');
+    document.documentElement.style.setProperty('--vh', vh + 'px');
+}
+
+// Run on load and on resize
+window.addEventListener('load', setViewportVariables);
+window.addEventListener('resize', setViewportVariables);
+</script>
+
+</body>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2026 Avenues of Grace. All Rights Reserved.</p>
+        <p>
+            <a href="https://www.google.com/maps/search/?api=1&query=818+East+Maple+Leaf+Road,+Maysville,+KY+41056" target="_blank">818 East Maple Leaf Road, Suite 238, Maysville KY 41056</a>
+        </p>
+        <p>
+            <a href="mailto:avenuesofgrace@gmail.com">avenuesofgrace@gmail.com</a> | 
+            <a href="tel:+14237147223">(423)-714-7223</a> | 
+            <a href="https://www.facebook.com/profile.php?id=100068791874025" target="_blank">Facebook</a>
+        </p>
+    </div>
+</footer>
+
+<style>
+/* ================= FOOTER STYLING ================= */
+footer {
+    background-color: #ffebcd;
+    color: #333;
+    text-align: center;
+    padding: calc(var(--vh) * 0.02) 0;
+    margin-top: calc(var(--vh) * 0.05);
+    font-size: calc(var(--vh) * 0.02);
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    color: #0077cc;
+}
+
+/* Responsive adjustments for footer on small phones */
+@media screen and (max-width: 430px) {
+    footer {
+        font-size: calc(var(--vh) * 0.025);
+        padding: calc(var(--vh) * 0.03) 10px;
+    }
+}
+</style>
+
+</html>
